@@ -10,5 +10,15 @@ namespace AntDesignBlazor.Servers
         }
 
         public DbSet<NavigationInfo> NavigationInfos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<NavigationInfo>()
+                .HasMany(x => x.Children)
+                .WithOne(x => x.Parent)
+                .HasForeignKey(x => x.ParentId)
+                .OnDelete(DeleteBehavior.SetNull);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

@@ -6,6 +6,11 @@
 
     <ItemGroup>
       <PackageReference Include="AntDesign" Version="0.4.0-nightly-2009120205" />
+      <PackageReference Include="Microsoft.AspNetCore.Blazor.HttpClient" Version="3.2.0-preview3.20168.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\WebApi\AntDesignBlazorWebApi\AntDesignModels\AntDesignModels.csproj" />
     </ItemGroup>
 
 </Project>

@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntDesignBlazorDemo", "AntDesignBlazorDemo\AntDesignBlazorDemo.csproj", "{7B85B8E7-656E-48A8-B678-D4BFB1F29B3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntDesignBlazorWebassembly", "AntDesignBlazorWebassembly\AntDesignBlazorWebassembly.csproj", "{85951E47-1E34-41C2-A753-8FA89B4FA135}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntDesignModels", "WebApi\AntDesignBlazorWebApi\AntDesignModels\AntDesignModels.csproj", "{CCBA3905-E5C2-48F7-B2C3-4A8C9097B336}"
 EndProject
 Global
@@ -16,10 +14,6 @@ Global
 		{7B85B8E7-656E-48A8-B678-D4BFB1F29B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B85B8E7-656E-48A8-B678-D4BFB1F29B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B85B8E7-656E-48A8-B678-D4BFB1F29B3E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85951E47-1E34-41C2-A753-8FA89B4FA135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85951E47-1E34-41C2-A753-8FA89B4FA135}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85951E47-1E34-41C2-A753-8FA89B4FA135}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85951E47-1E34-41C2-A753-8FA89B4FA135}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CCBA3905-E5C2-48F7-B2C3-4A8C9097B336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CCBA3905-E5C2-48F7-B2C3-4A8C9097B336}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCBA3905-E5C2-48F7-B2C3-4A8C9097B336}.Release|Any CPU.ActiveCfg = Release|Any CPU

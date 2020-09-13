@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AntDesignBlazor.Servers;
+using AntDesignBlazor.Servers.ServiceExtensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,10 +31,12 @@ namespace AntDesignBlazorWebApi
             services.AddControllers();
             services.AddDbContext<AntDesignContext>(op =>
             {
+                op.UseLazyLoadingProxies();
                 op.UseSqlite(Configuration.GetConnectionString("Default"),
                     optionBuilder =>
                         optionBuilder.MigrationsAssembly(typeof(Startup).Assembly.GetName().Name));
             });
+            services.AddServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

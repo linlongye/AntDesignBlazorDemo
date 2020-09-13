@@ -1,5 +1,5 @@
-﻿<Menu Theme="MenuTheme.Dark" Mode="MenuMode.Inline" DefaultSelectedKeys=@(new[] {"4"})>
-    <MenuItem Key="1">
+﻿<Menu Theme="MenuTheme.Dark" Mode="MenuMode.Inline" DefaultSelectedKeys=@(new[] {"1"})>
+    @*<MenuItem Key="1">
         <Icon Type="user" Theme="outline"/>
         <span class="nav-text">nav 1</span>
     </MenuItem>
@@ -30,5 +30,13 @@
     <MenuItem Key="8">
         <Icon Type="shop" Theme="outline"/>
         <span class="nav-text">nav 8</span>
-    </MenuItem>
+    </MenuItem>*@
+    @foreach (var menu in Menus)
+    {
+        <MenuItem Key="@menu.Id.ToString()" RouterLink="@menu.Path" RouterMatch="NavLinkMatch.All">
+        <Icon Type="shop" Theme="outline"/>
+        <span class="nav-text">@menu.Text</span>
+</MenuItem>
+    }
+    
 </Menu>

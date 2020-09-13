@@ -1,15 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AntDesignBlazorDemo.Services;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using AntDesignBlazorDemo.Data;
 
 namespace AntDesignBlazorDemo
 {
@@ -28,8 +23,12 @@ namespace AntDesignBlazorDemo
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddAntDesign();
+            services.AddHttpClient("default_client", client =>
+            {
+                client.BaseAddress=new Uri("https://localhost:8099/api/");
+            });
+            services.AddSingleton<INavigationService, NavigationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
